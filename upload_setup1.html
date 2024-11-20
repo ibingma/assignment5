@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- 
+	This is the html code for the upload_setup page. 
+	
+	Author: Ibing Maharlika
+   Date: 9/25/24
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Steps to upload and test your website on a server.">
+    <title>How to Upload and Test a Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 1024px;
+            padding: 20px;
+        }
+        h1, h2 {
+            font-weight: 400;
+        }
+        h1 {
+            font-size: 1.8em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        ol, ul {
+            margin-left: 20px;
+        }
+        ul {
+            list-style-type: square;
+        }
+        ul li ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+		  .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+	<!-- Back Button -->
+    <a href="first_page.html" class="back-button">Back to Main Page</a>
+	 
+    <h1>Steps to Upload the Website on a Server</h1>
+    <ol>
+        <li><strong>Select a Web Hosting Provider</strong>
+            <ul>
+                <li>This is basically renting storage space in a server that will store the website and make it accessible anytime through the Web.</li>
+                <li>There are several types of hosting services:
+                    <ul>
+                        <li>Dedicated</li>
+                        <li>Cloud</li>
+                        <li>Shared</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li><strong>Obtain a Domain Name</strong>
+            <ul>
+                <li>A domain name is the name you want for your website. It must be registered and unique, meaning no duplicates of someone else's website name.</li>
+                <li>You can purchase it from a domain registrar (e.g., <a href="https://www.godaddy.com" target="_blank">GoDaddy</a>, <a href="https://www.namecheap.com" target="_blank">Namecheap</a>).</li>
+                <li>GitHub Pages provides a free service to upload and publish a website using a given subdomain (e.g., <a href="https://ibingma.github.io/assignment2/index.html" target="_blank">https://ibingma.github.io/assignment2/index.html</a>).</li>
+            </ul>
+        </li>
+
+        <li><strong>Upload Files to the Server</strong>
+            <ul>
+                <li>All files needed by the website must be uploaded to the server. Two common ways to do this are through:
+                    <ul>
+                        <li><strong>FTP (File Transfer Protocol):</strong> Use an FTP client (e.g., FileZilla, Cyberduck).</li>
+                        <li><strong>Control Panel (cPanel/File Manager):</strong> Available on the web hosting provider’s control panel (usually cPanel).</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li><strong>Publish the Website</strong>
+            <ul>
+                <li>Once the files are uploaded, follow the hosting provider’s specific settings and instructions to publish the website.</li>
+                <li>Make sure your main page (e.g., index.html or index.php) is in the root directory, so it loads automatically when visitors access your website's URL.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h1>Steps to Test Web Pages</h1>
+    <ol>
+        <li><strong>Visit the Domain</strong>
+            <ul>
+                <li>Open a web browser and go to your website’s URL (e.g., <a href="https://www.yourdomain.com" target="_blank">https://www.yourdomain.com</a> or <a href="https://username.github.io" target="_blank">https://username.github.io</a>).</li>
+                <li>Ensure that the page loads without errors.</li>
+            </ul>
+        </li>
+
+        <li><strong>Check All Links</strong>
+            <ul>
+                <li>Click on internal links (navigation menus, buttons, etc.) to ensure they direct users to the correct pages.</li>
+                <li>Test external links to verify they open in new tabs if required.</li>
+            </ul>
+        </li>
+
+        <li><strong>Test Images, Styles, and Scripts</strong>
+            <ul>
+                <li>Make sure all images are displayed correctly, and that styles (CSS) and scripts (JavaScript) are functioning as expected.</li>
+            </ul>
+        </li>
+
+        <li><strong>Test on Multiple Devices and Browsers</strong>
+            <ul>
+                <li>View your site on different devices (desktop, mobile, tablet) and browsers (Chrome, Firefox, Safari, Edge) to ensure that it looks and works well across all platforms.</li>
+                <li>Use browser developer tools to check for any console errors or loading issues.</li>
+            </ul>
+        </li>
+
+        <li><strong>Check Responsiveness</strong>
+            <ul>
+                <li>Ensure that the site is responsive (adjusts well to different screen sizes) if you’ve implemented a responsive design.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Reference</h2>
+    <ul>
+        <li><a href="https://www.masterclass.com/articles/how-to-host-a-website" target="_blank">How to Host a Website - Masterclass</a></li>
+        <li><a href="https://mailchimp.com/resources/how-to-publish-a-website/" target="_blank">How to Publish a Website - Mailchimp</a></li>
+        <li><a href="https://www.hostinger.com/tutorials/website/how-to-upload-your-website" target="_blank">How to Upload Your Website - Hostinger</a></li>
+        <li><a href="https://www.namecheap.com/support/knowledgebase/article.aspx/181/27/how-do-i-upload-my-site/" target="_blank">How to Upload My Site - Namecheap</a></li>
+    </ul>
+	<!-- Back Button -->
+    <a href="first_page.html" class="back-button">Back to Main Page</a>
+	 
+</body>
+</html>

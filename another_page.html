@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- 
+	This is the html code for the other page. The layout will be grid format and float
+	for the horizontal navigation bar only.
+	
+	Author: Ibing Maharlika
+   Date: 10/21/24
+-->
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="keyword" content="quality inspector, produce, art, plants, color, hiking">
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<title> The Design Process </title>
+	
+	
+	<link href="reset.css" rel="stylesheet">
+	<link href="ap_layout.css" rel="stylesheet">
+	<link href="ap_style.css" rel="stylesheet">
+	
+	<!-- These 2 files are the main files shared by all the pages in the website -->
+	<link href="fp_style.css" rel="stylesheet"> <!--fp_style.css will take precedence over ap_style.css -->
+	<link href="fp_layout.css" rel="stylesheet">	<!--fp_layout.css will take precedence over ap_layout.css -->
+	
+	
+</head>
+
+<body>	
+	<header>	
+		<img src="Images/fp_Images_Icons/headerLogo3.png" alt="">
+		
+		<nav id="nav-bar" class="horizontalNavigation">
+			<button id="navicon" >
+				<img src="Images/fr_navicon.png" alt="Navigation Icon">
+			</button>
+			
+				<ul class="mainmenu">			
+					<li><a href="first_page.html">About Me</a></li>
+					<li><a href="another_page.html">Design Process</a></li>
+					<li><a href="#" class="submenuTitle">Birthdays</a> 
+						<ul class="submenu">
+							<li><a href="birthday_countdown.html">Countdown</a></li>
+							<li><a href="birthday.html">Celebrations</a></li>							
+						</ul>	
+					</li>										
+					<li><a href="#" class="submenuTitle">Transcripts</a> 
+						<ul class="submenu">
+							<li><a href="transcript.html">Assignment 2</a></li>
+							<li><a href="transcript_form.html">Assingment 3</a></li>
+							<li><a href="A4_transcript.html">Assingment 4</a></li>
+							<li><a href="A5_transcript.html">Assingment 5</a></li>
+						</ul>	
+					</li>
+					<li><a href="#" class="submenuTitle">Miscellaneous</a>	
+						<ul class="submenu">
+							<li><a href="upload_setup1.html">Upload and Test</a></li>
+							<li><a href="reference_page.html">Reference</a></li>
+							<li><a href="video_presentations.html">Video Presentations</a></li>
+						</ul>
+					</li>
+				</ul>	
+		</nav>		
+	</header>
+	
+	
+	<!--	For this assignment, this page will implements the flexbox system. Classes names 
+			are unchanged -->
+	<div class="row">
+		<h1>The Design Process</h1>
+	</div>
+	
+	<div class="row layout">
+		<div class="col-1-2">
+			<h2>Layout</h2>
+			<p>Planning the page layout was the most time-consuming part of the process, 
+				as I didn’t have a clear starting point beyond the goal of creating a personal 
+				website. I began by searching for potential photos and used Figma to design 
+				the layout. After numerous iterations, the final results—some of which are displayed
+				on the right—started to take shape. Ultimately, I selected the design featured 
+				on the main page because it felt the most personal and aligned perfectly 
+				with the site’s purpose.</p>
+
+			<p>Initially, I considered using a full background image, but the subject 
+				was too large and distracting from the main text. Instead, I opted for 
+				an image on the left and text on the right, as this balanced the elements 
+				better. To improve readability, I aligned the content in a grid-like format. 
+				I used the float system for positioning the image, text, footer sections, navigation
+				bar with the exception of the header.</p>
+		</div>
+		
+		<div class="col-1-2">
+			<img src="Images/ap_Images/layout_image.png" alt="Image 1">
+		</div>	
+		
+	</div>
+	
+	<div class="row colorPalettes">
+		<div class="color-grid">
+			<div class="col-1-2">
+				<img src="Images/ap_Images/colorPalettes2.png" alt="Image Color">
+			</div>
+		</div>
+		
+		<div class="col-1-2">
+			<h2>Color Palettes</h2>
+				<p>The color palettes used across these webpages were selected from 
+					the main page's self-image photo. It was a challenging process, 
+					involving a lot of trial and error, as there was no strict rule 
+					on which colors to choose or where they should be applied. 
+					Ultimately, the colors were picked based on their dominance and contrast,
+					while ensuring they complemented both the image and the overall 
+					aesthetic of the page. The goal was to create a visually harmonious 
+					and balanced design.</p>
+		</div>
+	</div>	
+	
+	<div class="row fontSection">
+		<div class="col-1-2">
+			<h2>Typography</h2>
+				<p>I chose the Roboto font, designed by Christian Robertson, for the website's typography. 
+					Its friendly and open curves create a welcoming feel, which I find ideal for a personal 
+					website. Since the purpose of the site is simply to introduce myself—without conveying 
+					any critical information—I wanted the reading experience to feel natural and relaxed, 
+					complementing the overall design.</p>
+		</div>	
+		
+		<div class="col-1-2">
+			<img src="Images/ap_Images/Roboto.png" alt="Font">
+		</div>
+	</div>	
+	
+	<div class="row">
+		<footer>Ibing Maharlika &copy; 2024 All Rights Reserved</footer>
+	</div>
+	
+</body>	
+</html>

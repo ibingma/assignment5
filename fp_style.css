@@ -1,0 +1,381 @@
+@charset "utf-8";
+/*
+   This file contains the base styles used by the first page.
+	
+	Author: Ibing Maharlika
+   Date: 10/21/24
+*/
+
+/* =============================================
+	HTML5 structural elements
+   =============================================
+*/
+
+article, aside, details, dl, figcaption, figure, footer, header, hgroup, main, nav, section {
+	display: block;
+}
+
+/* =============================================
+	Default colors, margins and sizing
+   =============================================
+*/
+
+html {		
+	background-color:hsl(132, 4%,70%);		
+}
+
+body { /*Center the body position*/
+	margin-left: auto;
+   margin-right: auto;
+}
+
+/* Local Date and Time Container */
+div#localTime {	
+	background-color: transparent;
+}
+
+div#dateNow {
+   background-color: transparent;
+   border: hidden;
+   color: rgba(255, 82, 192, 1);
+	font-size: 1em;
+   line-height: 1.1em;
+   font-family: Roboto, Helvetica, sans-serif;
+   font-weight: normal;
+}
+
+div#localTime > h3 {
+   font-size: 0.9em;
+   font-weight: normal;
+   color: rgba(255, 82, 192, 1);
+}
+
+/* Horzontal Navigation Bar */
+nav.horizontalNavigation a {
+   font-family: 'Roboto';  	
+	font-size:clamp(1em, 1vw, 1.5em); /*responsive text (min, preferred, max)*/
+   line-height: 2.8em;
+   text-decoration:none;
+	color: rgb(78,88,54);	
+	display: block;	
+}  	
+
+nav.horizontalNavigation a:hover, 
+nav.horizontalNavigation a:active {
+   text-decoration: underline;
+	opacity:0.8;
+}
+
+nav.horizontalNavigation li {
+	text-align: center;
+	position: relative;
+}
+
+#navicon{
+	display: none;
+}
+
+ul.mainmenu {
+	display: block;
+}
+
+/* Pull down submenu style */
+ul.submenu {
+	flex-direction: column;
+	flex-wrap: nowrap;	
+	position: absolute;
+	width: 100%;
+	background-color:hsl(132, 4%,70%);
+	text-indent: 30px;
+	display: none;	
+}
+
+a.submenuTitle:hover+ul.submenu, ul.submenu:hover {
+	display: block;
+}
+
+/*Main body section- image and text.*/
+#about-section {		
+	background-color:hsl(132,11%,91%);	
+}
+
+#leftColumn  {	
+	margin: 2em 2em 2em 2.5em;
+}
+
+#rightColumn {			
+	margin: 1em 3em 2em 2em;	
+}
+
+#rightColumn h1 {	
+	font-family:'Roboto', san-serif;
+	color: rgb(78,88,54);	
+	font-size: clamp(1.8em, 2vw, 2.5em);
+}
+p,
+#rightColumn p {	
+	font-family:'Roboto', san-serif;
+	color: rgb(0, 0,0);	
+	font-size: clamp(0.9em, 2vw, 1.2em);
+	line-height: 1.50em;
+}
+
+h2 {
+   font-size: 1.4em;
+   line-height: 1.8em;
+   font-family: 'Roboto', san-serif;
+   letter-spacing: 0.1em;
+   text-align: left;
+   font-weight: normal;
+   color: rgb(78,88,54);
+}
+
+/* Footer Setting */
+
+body > footer {	
+	background-color: hsla(72, 24%, 20%, 70%);
+	font-size:clamp(0.6em, 2vw, 0.9em);
+	color:hsl(132,11%,70%);
+}
+
+h3 {   
+	color:hsl(38,42%,70%);	
+   font-size: 1.1em;
+	font-weight: normal;
+   letter-spacing: 0.1em;
+   margin: 1em 0 0.5em 0;
+}
+/*
+body > footer h2 {   
+	color:hsl(38,42%,70%);	
+   font-size: 1.1em;
+	font-weight: normal;
+   letter-spacing: 0.1em;
+   margin: 1em 0 0.5em 0;
+}
+*/
+body > footer p {
+	font-size:inherit;
+	color:inherit;
+}
+
+
+/* Footer - Contact-me button styling */
+.btn.goto {
+	background-color: hsla(38,42%,70%, 70%);
+	border: 0.5px hsla(38,42%,70%, 70%);	
+	color:hsla(72, 24%, 20%, 70%);
+	font-size: 1.3em;
+	text-decoration: none;
+	margin: 1em 0 0 9.5em;
+}
+
+.btn.goto:hover {
+	background: hsla(38,42%,70%,90%);
+}
+
+/* Footer - Connect section */
+nav.verticalNavigation h3 {
+	margin-left: 15em;
+}
+
+nav.verticalNavigation ul {
+   margin: 0 0 0 16.5em;
+   line-height: 2em;	
+}
+
+ nav.verticalNavigation a {	
+	color:hsl(132,11%,70%)!important;
+	text-decoration:none;
+}
+
+nav.verticalNavigation a:link, 
+nav.verticalNavigation a:visited {
+   color: rgb(186, 186, 156);
+}
+
+nav.verticalNavigation a:hover, 
+nav.verticalNavigation a:active {
+   text-decoration: underline;
+}
+
+
+/* Footer - Contact section */
+#contactInfo p {
+   line-height: 1.5em;
+   margin-left: 5.5em;		
+}   
+
+#contactInfo  h3 {  
+   margin-left: 5em;	
+}
+
+/* Footer - Copyright section */   
+#copyRight {
+	text-align: left;	
+	font-size:0.9em;	
+}
+
+@media only screen and (max-width: 480px) {
+	/* Navigation bar styling */
+	/*nav#nav-bar.horizontalNavigation {
+		width: auto;
+	}*/
+	
+	#navicon {
+		display: block;
+	}
+	nav.horizontalNavigation li {       
+      width: 100%;  /* Make each item take full width */		
+		font-size: 1.3em;		
+	}
+	
+	header nav ul.mainmenu li a {
+		display: block;		
+		/*width: 150%;*/
+		padding: 5px 0;
+		line-height: 1.2em;
+		box-sizing: border-box;
+	}
+	
+	/* Make the submenu stack below the parent item */
+   ul.submenu {
+      width: 150%;  /* Ensure submenu is wide enough */     
+		background-color:hsl(132,11%,91%);
+		font-size: 0.8em;
+   }
+	
+	ul.submenu li {
+		text-align: left;
+	}
+	
+	/* Right column text styling */
+	#rightColumn h1 {		
+		font-size: 2.5em;	
+	}
+
+	#rightColumn p {	
+		font-size: 1.5em;
+	}
+	
+	/* Footer section Styling */
+	.btn.goto {
+		margin: 1em 0 0 0;
+		font-size: 3.2em;
+	}
+	
+	/* Footer - Connect section */
+	nav.verticalNavigation h3 { 
+		margin-left: 0;
+		font-size: 3em;
+		text-align: center;
+	}
+	
+	nav.verticalNavigation ul {
+		margin: 0;
+		line-height: 2em;	
+		font-size: 2em;
+	}
+	
+	/* Footer - Contact section */
+	#contactInfo  h3 {
+		font-size: 3em;
+		margin:0;	
+		text-align: center;
+	} 
+	
+	#contactInfo p {
+		line-height: 1.5em;
+		margin-left: 2.5em;	
+		font-size: 2em;	
+	} 
+	
+	/* Footer - Copyright section */
+	#copyRight {		
+		font-size:1.5em;	
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 640px) {
+	/* Navigation bar submenu styling */
+	#navicon {
+		display: block;
+	}
+	
+	ul.submenu {
+		text-indent: 20px;
+		background-color:hsl(132,11%,91%);
+	}
+	
+	/* Main body text sytling */
+	#rightColumn h1 {		
+		font-size: 1.8em;	
+	}
+
+	#rightColumn p {	
+		font-size: 1.2em;
+	}
+	
+	/* Footer - Contact-me button section */
+	#gotoButton{
+		text-align: center; 
+	}	 
+	.btn.goto {
+		font-size: 1.5em;
+		margin: 1em 0 2em 0;
+	}
+		
+	/* Footer - Connect section */
+	nav.verticalNavigation h3 {
+		margin: 0;
+		font-size: 1.5em;		
+	}
+	
+	nav.verticalNavigation ul {
+		margin: 0;
+		line-height: 2em;	
+		font-size: 1.2em;		
+	}
+	
+	/* Footer - Contact section */
+	#contactInfo  h3 {  
+		font-size: 1.5em;	 
+		text-align: center;
+	}
+	
+	#contactInfo p {
+		line-height: 1.5em;
+		margin: 0;	
+		font-size: 1.2em;	
+		text-align: center;
+	} 
+	
+	/* Footer - Copyright section */
+	#copyRight {		
+		font-size:1em;	
+		text-align: center;
+	}
+}	
+
+@media only screen and (min-width: 641px) and (max-width: 960px) {
+	/* Lower the self-photo image to make the page looks more balanced */
+	#leftColumn img {
+		margin-top: 3em;
+	}
+	
+	.btn.goto {	
+	margin: 1em 0.5em 0 9em;
+	}
+	
+	
+	/* Footer - Connect section */
+	nav.verticalNavigation h3 {
+		margin-left: 12em;
+	}
+	nav.verticalNavigation ul {
+		margin-left: 13em;
+		line-height: 2em;	
+	}	
+}
+

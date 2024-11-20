@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5: Demonstrate Use of JavaScript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 1024px;
+            padding: 20px;
+        }
+        h1, h2 {
+            font-weight: 400;
+        }
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 1.5em;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<!-- Back Button -->
+    <a href="first_page.html" class="back-button">Back to Main Page</a>
+
+    <h1>Hi, my name is Ibing Maharlika</h1>
+    <h2>Assignment 5: Demonstrate Use of JavaScript</h2>
+
+    <p>
+        The first task was to change the background color of the homepage at regular intervals. These color changes are 
+		  applied to both the HTML and body elements' backgrounds. The intervals are set at 5 seconds.
+    </p>
+    
+    <p>
+        Adding to the festive atmosphere, a countdown timer is set—not for a specific birthday but rather for New Year's Day 2025,
+		  building anticipation and aligning with the celebratory tone of the page. Between the navigation bar and the footer, 
+		  a silhouette of people dancing serves as a dynamic background image, bridging the sections and further enhancing the lively feel.
+    </p>
+    
+    <p>
+        These are the JavaScript codes, where I used a function called changeBackgroundColor to cycle through different colors. 
+		  These colors, which are specific to the homepage, are stored in an array. Both the colors array and the colorIndex 
+		  variables are defined outside the function so that they don’t have to be redefined with each interval. This is especially
+		  important for colorIndex because it needs to increment and remember its position every time the function is called.
+    </p>
+    
+    <p>
+        The colorIndex cycles through the array continuously without exceeding its bounds. This is achieved using the 
+		  modulo operator (%), which resets colorIndex to the beginning of the array once it reaches the end, creating a smooth loop 
+		  through the colors.
+    </p>
+
+    <p>
+        Back to the homepage, I have added the current local time display at the top left. JavaScript function is used to
+		  add this time and date elements into the html when the page is loaded onto the screen. 
+    </p>
+
+    <p>
+        This is the function called addLocalTime to add the local time and date. 
+    </p>
+	 
+	 <p>
+        And this is the runClock function to set the time and date to the current setting. They are all displayed under the
+		  div id dateNow.
+    </p>
+	 
+	 <p>
+        The homepage still works under different screen settings.
+    </p>
+	 <p>
+        The second task was to add a new page to the website featuring a countdown timer to a specific date.
+		  I designed the page with a clean, minimalist style to keep the timer as the focal point. For the backdrop, 
+		  I chose a stunning sunset photo taken from one of Bali’s beautiful beaches, adding a serene and visually striking element. 
+    </p>
+	 <p>
+        The navigation bar has been repositioned to sit at the bottom of the image, providing easy access without distracting 
+		  from the main content.
+    </p>
+	 <p>
+         Aside from the timer, there’s a single paragraph to keep the page simple and uncluttered.
+    </p>
+	 <p>
+        JavaScript code powers the countdown timer functionality. The countdown function itself is adapted from a tutorial in
+		  the textbook, with modifications for flexibility and style.
+    </p>
+
+    <p> I moved the targetDate variable outside the function for easy access, allowing quick adjustments to the countdown date. </p>
+	 
+	 <p>Additionally, I included if-else statements to change the color of the timer and text as the target date approaches, 
+	 adding a visual cue as the event draws nearer.</p>
+	 
+	 <p>Let’s change the date to below 30 days. </p>
+	 
+	 <p>The texts and timer color changed to red.</p>
+	 
+	 <p>Let’s change the date again to above 30 days but below 180 days.</p>
+	 
+	 <p>The texts and timer color changed to green.</p>
+	 
+	 <p>And above 180 days, the texts and timer color changed to blue.</p>
+	 
+	 <p>The page also works for different screen sizes.</p>
+	 
+	 <p>Thank you for watching.</p>
+
+    <!-- Back Button -->
+    <a href="first_page.html" class="back-button">Back to Main Page</a>
+
+</body>
+</html>

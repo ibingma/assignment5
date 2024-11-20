@@ -1,0 +1,333 @@
+@charset "utf8";
+/*
+   This file contains the layout settings used by the first page. The layout concept 
+	is based on the floating system.
+	
+	Author: Ibing Maharlika
+   Date: 10/21/24
+*/
+
+html {
+	height: 100%;	
+}
+
+body {     
+	height: 100vh; /* Full height of the viewport. */
+	min-height:100%; /*set minimum height to match browser window full height.*/
+	max-width: 1024px;
+   min-width: 659px;   
+	width:95%;	
+}
+body > header {
+	position: relative;
+}
+body > header > img {	
+	width: 100%;	
+	height: auto; /*Maintain image aspect ratio.*/
+}
+
+/* Local Date and Time */
+div#localTime {
+	display: block;
+	position: absolute;
+   top: 5px;
+   left: 25px;   
+	height: 14%;
+	width: 10%;
+}
+
+div#localTime > h3 {   
+   top: 128px;
+   left: 25px;  
+	margin: 0;
+}
+
+div#dateNow {
+   display: block;
+   position: absolute;
+   top: 20px;
+   left: 0px;    
+   width: 140px;   
+}
+
+/*Set width for each navigation button to 20% of body width.*/
+nav.horizontalNavigation li {
+	float: left;
+}
+
+nav.horizontalNavigation::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+	
+body > header > nav.horizontalNavigation > ul > li { 
+	width:20%; 		
+}
+
+/*Display setting for the main body part*/
+#about-section {
+	display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;	
+}
+
+/*Columns section, left is for image, right is for text.*/
+#leftColumn  {	
+	flex:1;
+	width: 40%;		
+}
+
+#leftColumn img {
+	width:100%;	
+	box-shadow:rgb(51,51,51) -15px 0px 25px;
+}
+
+#rightColumn {		
+	flex:1;	
+}
+
+#rightColumn p {
+	padding-top:1em;	
+}
+
+/* Footer section is displayed in flexbox layout.*/
+footer {		
+	display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;			
+}
+
+/*Layout setting for the go-to-button - now is the Contact Me button.*/
+.btn.goto {	
+	padding: 0.5em 1.5em;	
+	cursor: pointer;
+	display: inline-block;
+	border-radius:30px;
+	width: 5em;	
+}
+
+#gotoButton {
+	flex: 1;	
+}
+
+/* Footer - Connect section */
+footer > nav.verticalNavigation {
+	flex: 1;		
+}
+
+footer > nav.verticalNavigation li {
+	text-align:left;	
+}
+
+footer > nav.verticalNavigation img {
+	 display:inline;
+ }
+
+/* Footer - Contact section */
+#contactInfo  {
+	flex:1;
+}
+
+/* Footer - Copyright section */
+#copyRight {
+	flex-basis: 100%;	/*This will make it fill the next row by itself.*/
+	padding-left:3em;	
+}
+
+@media only screen and (max-width: 480px) {
+	 /* Local Date and Time */
+	div#localTime {
+		display: block;
+		position: absolute;
+		top: 5px;
+		left: 50px;   
+		height: 14%;
+		width: 100%;
+	}
+
+	div#localTime > h3 {   
+		top: 128px;
+		left: 25px;  
+		margin: 0;
+	}
+
+	div#dateNow {
+		display: block;
+		position: absolute;
+		top: 25px;
+		left: 0px;    
+		width: 140px;   
+	}
+	/* Display the navigation icon and hide the navigation bar menu */
+	
+   #navicon {
+		position: absolute;
+		background: none;
+		border-style: solid;
+		border-color: transparent; /* Make invisible */
+   }
+	
+  header nav ul.mainmenu {
+      display: none;	
+		list-style-type: none;
+		padding: 30px 0 0 10px;
+		margin: 0;
+	}
+	
+	#navicon:hover+ul, header nav ul:hover {
+      display: block;
+		position: relative;
+	}		
+   
+   nav.horizontalNavigation li {    
+		float: none;  /* Remove the float */
+		position: relative;		
+	}
+	
+	ul.submenu {
+		position: relative;
+	}
+	/*#navicon {
+      display: block;		
+   }*/
+	/*a#navicon:hover+ul, header nav ul:hover {
+      display: block;
+		position: relative;
+	}*/
+   /* Make the submenu stack below the parent item */
+  /* ul.submenu {       
+      position: relative;  /* No absolute positioning on mobile 		 
+   }*/
+    
+   /* Show submenu on hover */
+   /*li:hover ul.submenu {
+      display: block;
+   }
+	
+	/* Main body section, image is hidden and right-column text 
+		fill up the display screen */
+	#about-section {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	#leftColumn img {
+		display: none;
+	}
+	
+	#rightColumn {
+		flex: none;
+		display: 100%;		
+	}
+	
+	/* Footer section layout */
+	footer {
+		flex-direction: column; /* To display contents as stacking */
+		align-items: center;
+	}
+	
+	.btn.goto {
+		padding: 0.5em 2em;	
+	}
+	
+	#contactInfo h3 {
+		padding: 1em 0 0.5em 0;
+	}
+	
+	#copyRight {		
+		padding-top:1em;	
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 640px) {
+   /* Local Date and Time */
+	div#localTime {
+		display: block;
+		position: absolute;
+		top: 5px;
+		left: 50px;   
+		height: 14%;
+		width: 100%;
+	}
+
+	div#localTime > h3 {   
+		top: 128px;
+		left: 25px;  
+		margin: 0;
+	}
+
+	div#dateNow {
+		display: block;
+		position: absolute;
+		top: 20px;
+		left: 0px;    
+		width: 140px;   
+	}
+	body {
+		min-width: 481px;
+	}
+	/* Display the navigation icon and hide the navigation bar menu */
+	   #navicon {
+		position: absolute;
+		background: none;
+		border-style: solid;
+		border-color: transparent; /* Make invisible */
+   }
+	
+  header nav ul.mainmenu {
+     display: none;	
+		list-style-type: none;
+		padding: 30px 0 0 10px;
+		margin: 0;
+	}
+	
+	#navicon:hover+ul, header nav ul:hover {
+      display: block;
+		position: relative;
+	}		
+   
+   nav.horizontalNavigation li {    
+		float: none;  /* Remove the float */
+		position: relative;		
+	}
+	
+	ul.submenu {
+		position: relative;
+	}
+	
+	#about-section {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	#leftColumn img {
+		display: none;
+	}
+	
+	#rightColumn {
+		flex: none;
+		display: 100%;		
+	}
+	
+	/* Footer section layout */
+	footer {
+		flex-direction: column; /* To display contents as stacking */
+		align-items: center;
+	}
+	
+	.btn.goto {
+		padding: 0.5em 2em;	
+	}
+	
+	#contactInfo h3 {
+		padding: 1em 0 0.5em 0;
+		margin: 0;
+	}
+	
+	#copyRight {		
+		padding-top:1em;	
+	}
+}

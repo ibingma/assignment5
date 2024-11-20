@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/*
+   This file contains the animation styling used by the birthday page.
+	
+	Author: Ibing Maharlika
+   Date: 10/28/24
+*/
+
+/*=================================================================
+	Transition style for the top horizontal navigation bar
+===================================================================*/
+body > header > nav.horizontalNavigation {
+	background-color:hsla(132, 4%,70%, 0.7);	
+	transition: background 2s ease;
+}
+
+body > header > nav.horizontalNavigation:hover {
+	background-color:hsl(132, 4%,70%);
+}
+
+/*=================================================================
+	Scroll animation for the 'Warm Wishes' column
+===================================================================*/
+div#marquee {
+   background-color: rgba(0, 0, 0, 0.25);   
+   height: 718px;
+   overflow:hidden;
+   border: rgb(151, 151, 151) 5px inset;
+   margin: 0px 5px;
+	position: relative; /* Containing block for the #wishes */
+}
+
+div#wishes {
+	position: absolute; /* Absolute position relative to #marquee. This will */
+}								/*	allow it to scroll up independent of the main page */
+
+
+/* Keyframe Styles */
+@keyframes scroll {
+	0% {top: 300px;}
+	100% {top: -700px;}
+}
+
+/* Animation Styles */
+#wishes {
+	animation: scroll 100s linear infinite; /* keeps on scrolling */
+}
+
+#wishes:hover  {
+	animation-play-state: paused; /* paused the scroll when mouse hovered */
+}
+
+@media only screen and (max-width: 480px) {
+	body > header > nav.horizontalNavigation {
+		background-color:hsl(132, 4%,70%);	
+		width: 20%;	
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 640px) {
+	div#marquee {
+		height: 543px;
+	}
+}
+
+@media only screen and (min-width: 641px) and (max-width: 960px) {
+	div#marquee {
+		height: 726px;
+	}
+}

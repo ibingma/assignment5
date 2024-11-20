@@ -1,0 +1,95 @@
+@charset "utf-8";
+/*
+   This file contains the base styles used by the another_page.html
+	
+	Author: Ibing Maharlika
+   Date: 10/21/24
+*/
+
+/* =============================================
+	HTML5 structural elements
+   =============================================
+*/
+
+article, aside, details, dl, figcaption, figure, footer, header, hgroup, main, nav, img, section {
+	display: block;
+}
+
+/* =============================================
+	Default colors, margins and sizing
+   =============================================
+*/
+
+html {		
+	background-image:url('Images/ap_Images/backgroundImg2a.png');
+	background-size: cover;
+	background-position: center; 
+   background-repeat: repeat;
+}
+
+body > header > img {
+	margin:0;
+}
+
+body > header > nav.horizontalNavigation {
+	background-color:hsl(132, 4%,70%);
+}
+
+.row {
+	background-color:hsla(132,11%,91%,70%);
+}
+
+.row h1 {
+   font-size: 2.4em;
+   line-height: 2em;
+   font-family: 'Roboto', san-serif;
+   letter-spacing: 0.3em;
+   text-align: center;
+   font-weight: normal;
+   color: rgb(78,88,54);
+	text-decoration:underline;
+}
+/*
+h2 {
+   font-size: 1.4em;
+   line-height: 1.8em;
+   font-family: 'Roboto', san-serif;
+   letter-spacing: 0.1em;
+   text-align: left;
+   font-weight: normal;
+   color: rgb(78,88,54);
+}
+
+p{
+	font-family:'Roboto', san-serif;
+	color: rgb(0, 0,0);
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+*/
+footer {
+	font-size: 0.8em;
+   color:hsl(132,11%,70%);
+}
+   
+@media only screen and (max-width: 480px) {
+	.row h1 {
+   font-size: 2em;
+	}
+	
+	h2 {
+		font-size: 1.6em;
+	}
+
+	p{
+		font-size: 1.4em;	
+	}
+	
+	footer {
+		font-size: 1em;
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 640px) {
+
+}

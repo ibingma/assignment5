@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- 
+	This is the html code for the video presentation page. 
+	
+	Author: Ibing Maharlika
+   Date: 10/28/24
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   
+	 <title>Video Presentations</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 1024px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+		  h2{
+				font-size:1em;
+		  }
+		  
+        ul {
+            list-style-type: disc;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+		  
+		  .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+			audio,video {
+				box-shadow: rgb(51,51,51) 8px 8px 15px;
+				display: block;
+				margin: 10px auto;
+				width: 90%;
+			}
+			
+			p {
+				text-align: center;}
+
+    </style>
+</head>
+<body>
+   <video controls poster="VideoPresentations/image_assignment4.png" />
+			<source src="Assignment5 - Made with Clipchamp.mp4" type="video/mp4" />
+			<p><em>To play this clip, your browser needs to support HTML5.</em></p>
+		</video>		
+	<p>Assignment 5 - Demonstrate Use of JavaScript</p>
+	
+<!-- Back Button -->
+    <a href="first_page.html" class="back-button">Back to Main Page</a>
+</body>
+</html>

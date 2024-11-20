@@ -1,0 +1,286 @@
+@charset "utf8";
+
+/*
+   This file contains the layout settings used by the web form page. The layout concept 
+	is based on the flexbox system.
+	
+	Author: Ibing Maharlika
+   Date: 10/10/24
+*/
+/* Title of the form. */
+section h1 {
+	width: 46%;
+	margin-left: 265px;
+}
+
+/*Set Flexbox display container for the form.*/
+form#cOrder {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	boder-radius: 20px;
+	-webkit-flex: 1 1 300px;
+	flex: 1 1 300px;	
+	padding: 10px;		
+}
+
+/*Set each form row to display as Flexbox.*/
+div.formRow {
+	display:-webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row no-wrap;
+	flex-flow: row no-wrap;	
+}
+
+div.formRow > select,
+div.formRow > input {	
+	height: 20px;		
+	max-width: 250px;	
+}
+
+div.formRow select#occupation {	
+	height: 25px;	
+}
+
+/* Legend Styles */
+legend {	
+	padding:20px 0 5px 0;
+	color: rgb(78,88,54);
+}
+
+/*Checkbox setting.*/
+#contactMeCB {
+	display: flex;
+	padding-top: 0.5em;
+	justify-content:right;
+}
+
+/*Textarea setting*/
+#commBoxRow {
+	display: flex;
+	flex-direction: column;
+}
+
+#commBoxRow label {
+	width: 100%;
+}
+
+#commBox {
+	margin-top: 10px;
+	height: 200px;
+	resize: none;
+}
+
+#charCaption {
+   font-size: 0.7em;   /* Smaller text */
+   color: grey;        /* Optional: grey color for the caption */   
+}
+
+/* Buttons section */
+#buttons {
+	display: flex;
+	flex-direction: column-reverse;
+	text-align:center;
+	width: 100%;
+}
+
+#buttons input[type="reset"] {
+	margin: 10px auto;
+}
+
+input[type='submit'] {
+	padding: 0.5em;
+}
+
+ input[type='reset'] {
+	padding: 0.1em;
+}
+
+
+/*Hide the Contact Me button, as this is available only on the main page. */
+#gotoButton {
+	visibility: hidden;
+}
+
+/* Validation Styles */
+input:focus, select:focus, textarea:focus {
+	background-color: rgb(220, 255, 220);
+}
+
+input#fName:focus:valid,
+input#lName:focus:valid,
+input#poscode:focus:valid, 
+input#phone:focus:valid,
+input#mail:focus:valid {
+	background: rgb(220,255, 220) url(rb_valid.png) bottom right/contain no-repeat;
+}
+
+input#fName:focus:invalid,
+input#lName:focus:invalid,
+input#poscode:focus:invalid, 
+input#phone:focus:invalid,
+input#mail:focus:invalid {
+	background: rgb(225,232, 233) url(rb_invalid.png) bottom right/contain no-repeat;
+}
+
+@media only screen and (max-width: 480px) {
+	/* Adjust the width and center the position of the h1 text's background */
+	body h1 {	
+		width: 95%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+	/* Legend Styles */
+	legend {	
+		padding:30px 0 5px 0;
+		color: rgb(78,88,54);
+	}
+	
+	/* Set Flexbox display as column direction */
+	form#cOrder {
+		display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: column;
+      flex-flow: column;
+		flex-direction: column;
+		max-width: 640px;		
+		padding: 10px;			
+	}
+		
+	/* Change display for each form row to column.*/
+	div.formRow {
+		display:-webkit-flex;
+		display: flex;
+		-webkit-flex-flow: column;
+		flex-flow: column;	
+	}
+	
+	div.formRow > select,
+	div.formRow > input {	
+		height: 30px;
+		max-width: 250em;	
+		padding: 0 0 0.2em 0;		
+	}
+	
+	div.formRow select#occupation {
+		flex-basis: 100%;
+		height: 100%;			
+	}
+	
+	/*This is to make the checkbox larger in the smaller screen. */
+	input[type="checkbox"] {
+		transform: scale(2); /* Increase size by 2 times */
+		-webkit-transform: scale(2); 
+		-moz-transform: scale(2);
+	}
+	
+	form#contact label {
+		padding: 0.5em 0 0.2em 0;
+	}
+	
+	/* Change display to flex, buttons' order is reverse to make the submit 
+		button more prominent */
+	div#buttons {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column-reverse;
+		flex-direction: column-reverse;		
+		align-items: center;
+		gap: 0.5em;
+	}
+	/* Hide the 'Contact me' button */
+	#gotoButton {
+		display: none;
+	}
+
+	#buttons input[type="submit"] {
+		width: 70%;
+		height: 100%;
+	}	
+}	
+
+@media only screen and (min-width: 481px) and (max-width: 640px) {
+	/* Adjust the width and center the position of the h1 text's background */
+	body h1 {	
+		width: 95%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	form#cOrder {
+		display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: column;
+      flex-flow: column;
+		flex-direction: column;
+		max-width: 640px;
+	}
+	
+	/* Legend Styles */
+	legend {	
+		padding:30px 0 0 0;
+	}
+	
+	/* Change display for each form row to column.*/
+	div.formRow {
+		display:-webkit-flex;
+		display: flex;
+		-webkit-flex-flow: column;
+		flex-flow: column;	
+	}
+	
+	div.formRow > select,
+	div.formRow > input {	
+		height: 30px;
+		max-width: 100%;	
+		padding: 0.1em 0;		
+	}
+	
+	div.formRow select#occupation {
+		flex-basis: 100%;
+		height: 100%;			
+	}
+	
+	/*This is to make the checkbox larger in the smaller screen. */
+	input[type="checkbox"] {
+		transform: scale(1.5); /* Increase size by 2 times */
+		-webkit-transform: scale(1.5); 
+		-moz-transform: scale(1.5);
+	}
+	
+	form#contact label {
+		padding: 0.5em 0 0.2em 0;
+	}
+	
+	/* Change display to flex, buttons' order is reverse to make the submit 
+		button more prominent */
+	div#buttons {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column-reverse;
+		flex-direction: column-reverse;		
+		align-items: center;
+		gap: 0.5em;
+	}
+	
+	#buttons input[type="submit"] {
+		width: 70%;
+		height: 100%;
+	}	
+	
+	/* Hide the 'Contact me' button */
+	#gotoButton {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 641px) and (max-width: 960px) {
+	/* Adjust the width and center the position of the h1 text's background */
+	body h1 {	
+		width: 52%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}

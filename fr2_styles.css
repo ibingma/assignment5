@@ -1,0 +1,198 @@
+@charset "utf-8";
+
+/*
+   This file contains the base styles used by the web form page.
+	
+	Author: Ibing Maharlika
+   Date: 10/21/24
+*/
+
+/*Set main body specifications.*/
+/*body {
+	min-height: 100%;  
+   margin: 0px auto;
+   max-width: 1020px;  
+   min- width: 100%;
+}*/
+
+/*Form section setting. Added background image to the form */
+body > section {
+	/*background-image: url("Images/form_images/scenery1.jpg");
+	background-size: cover;
+	background-position: center;
+	background-color:hsl(132,11%,91%);
+	margin-top:0;	
+	padding: 1em;*/
+}
+
+section h1 {
+   font-size: 2.4em;
+   line-height: 2em;
+   font-family: 'Roboto', san-serif;
+   letter-spacing: 0.3em;
+   text-align: center;
+   font-weight: normal;
+   color: rgb(78,88,54);
+	background-color: hsla(132,11%,91%, 70%);
+	border-radius: 8px;
+	transition: background 3s, color 2s;
+}
+section h1:hover {
+	background: rgb(78,88,54);;
+	color: hsla(132,11%,91%, 90%);
+}
+/* Form - add background color to the form to give more visibility 
+	for the label and input boxes */
+
+fieldset#secondInfo,	
+fieldset#custInfo {
+	background-color: hsla(132,11%,91%, 70%);	
+    border: 2px solid #ccc; /* Customize the outline */
+    border-radius: 8px; /* Rounded corners for modern look */   
+	 padding: 0;
+	 
+	 width: 21%;
+	 padding: 0.5em 2em 0.9em 2em;
+}
+
+/* Form - Remove default grooved border and apply custom border */
+fieldset {
+    border: none; 
+}
+
+/* Form - positioned the form in the center of the body */
+form#cOrder {	
+	font-size: 1.2em;		
+	justify-content: center;
+}
+
+/*Form rows setting.*/
+div.formRow {	
+	margin: 7px 0 ;
+	
+}
+div.formRow label {
+	width: 110px;
+	display:inline-block;
+	
+}
+div.formRow > select,
+div.formRow > input {	
+	font-family:'Roboto', san-serif;
+	color: rgb(0, 0,0);
+	font-size: 1em;		
+}
+
+/*Selection box.*/
+div.formRow select#occupation {	
+	font-size: 0.9em;
+	min-width: 216px;
+}
+
+/*Checkbox font size.*/
+#contactMeCB {
+	font-size: 0.9em;
+}
+
+/*Clear and Submit buttons font size.*/
+div#buttons {
+	font-size: 0.8em;	
+}
+
+#secondInfo input[type="submit"] {
+  /*font-size: 0.8em;*/
+  font-weight: bold;
+}
+
+/*Mainly for caption lettering.*/
+section p {
+   line-height: 1em;
+   margin: 2px 0px;
+}
+
+#secondInfo input[type="submit"] {
+    transition: background 3s, color 3s ease;
+}
+
+#secondInfo input[type="submit"]:hover {
+	background: rgb(78,88,54);
+	color: hsla(132,11%,91%, 90%);
+}
+
+@media only screen and (max-width: 480px) {
+	section h1 {
+		font-size: 1.8em;
+	}
+	form#cOrder {
+		font-size: 1.8em;	
+		margin: 0 auto;		
+	}
+	
+	div.formRow > select,
+	div.formRow > input {			
+		font-size: 1em;		
+	}
+	
+	div.formRow select#occupation {		
+		font-size: 1em;
+	}
+	
+	#commBox {
+		font-size: 1em;
+		padding-bottom: 1em;
+	}
+	
+	/* Center the clear and submit buttons */
+	div#buttons {
+		margin: 1.5em auto 0 auto;
+	}
+	
+	#buttons input[type="submit"] {
+		margin: 0 ;
+	}
+}
+
+	
+@media only screen and (min-width: 481px) and (max-width: 640px) {
+	section h1 {
+		font-size: 2em;
+	} 
+	
+	form#cOrder {
+		font-size: 1.5em;	
+		margin: 0 auto; /* Center align the form */
+	}
+	
+	div.formRow > select,
+	div.formRow > input {			
+		font-size: 1em;		
+	}
+	
+	div.formRow select#occupation {		
+		font-size: 1em;
+	}
+	
+	#commBox {
+		font-size: 1em;
+	}
+	
+	/* Center the clear and submit buttons */
+	div#buttons {
+		margin: 1.5em auto 0 auto;
+	}
+	
+	#buttons input[type="submit"] {
+		margin: 0 ;
+	}
+	
+	/* Adjust footer layout */
+	nav.verticalNavigation {
+		padding-top: 2em;
+	}
+}
+
+@media only screen and (min-width: 641px) and (max-width: 960px) {
+	form#cOrder {
+		margin: 0 auto;	
+	}
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- 
+	This is the html code for the transcript page. 
+	
+	Author: Ibing Maharlika
+   Date: 9/25/24
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMP 2861 Assignment 2 - Layout Design for a Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 1024px;
+            padding: 20px;
+        }
+        h1, h2 {
+            font-weight: 400;
+        }
+        h1 {
+            font-size: 1.8em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+		   .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<!-- Back Button -->
+    <a href="first_page.html" class="back-button">Back to Main Page</a>
+	 
+    <h1>Hi, my name is Ibing Maharlika.</h1>
+    <p>This is the website that I built for COMP 2861 Assignment 2 titled "Layout Design for a Website".</p>
+
+    <h2>Design Concept</h2>
+    <p>
+        This website demonstrates CSS floats in web design. While the header image is static, the other elements use floats.
+		  The navigation bar items are floated to the left with centered text. In the main body, I created two columns: an image
+		  on the left and text on the right, both displayed side by side using the float property. In the footer, I applied floats
+		  for various elements like a navigation button, social media icons, contact info, and a copyright statement. Floats are mixed 
+		  to achieve the design: the copyright is floated left, while the navigation is floated right.
+    </p>
+
+    <h2>Design Ideas</h2>
+    <p>
+        Since this was my first HTML and CSS project, the design process took some time. I explored inspiration from sites like Pinterest, 
+		  land-book.com, Dribbble.com and many others, before sketching in Figma. I initially used a stock image but eventually chose
+		  a self-portrait from my photo album. The image fits the personal website theme, and I added a box-shadow effect for a floating appearance.
+    </p>
+    
+    <h2>Color Scheme & Typography</h2>
+    <p>
+        The color palette was based on the image, featuring dark and light contrasting tones for balance. After experimenting with combinations, 
+		  I settled on a harmonious scheme. For typography, I used the Roboto font from Google Fonts, known for its friendly, open curves, ideal for
+		  a relaxed reading experience.
+    </p>
+    
+	 <h2>Progressive Enhancement</h2>
+    <p>
+        I implemented progressive enhancement with text sizing that adjusts with window resizing. However, the image shrinks more than the text when 
+		  the window is small, creating imbalance. Solving this issue with floats proved difficult, and online research suggested Flexbox, which I plan 
+		  to learn later.
+    </p>
+
+    <h2>Links</h2>
+    <p>
+        The horizontal navigation bar contains four active links: the first links to this page, the second to another page, the third to a how-to page,
+		  and the fourth to a transcript. The footer also includes a button linking to another page, as required by the assignment.
+    </p>
+
+    <h2>Another Page</h2>
+    <p>
+        On the next page, I detailed the design process for the 'About Me' section, using a CSS grid layout. The grid system organizes images and content 
+		  into rows and columns. The navigation bar at the top still uses floats, but the rest of the page relies on the grid for placement. A personal photo
+		  of the St. Lawrence River serves as the background, edited in Figma and tiled for use.
+    
+    <h2>Upload and Test</h2>
+    <p>
+        I included steps for uploading and testing the website, linking them to a navigation bar item. Although I haven’t tested these steps myself, 
+		  I referenced online sources to compile them.
+    </p>	 
+
+    <h2>Conclusion</h2>
+    <p>
+        I found the grid system easier to work with than floats since it offers more control over element placement. However, it requires more complex HTML.
+		  Despite the challenges, this project was a valuable learning experience. While I did more than required, it helped me understand how HTML and CSS
+		  function together.
+    </p>
+    <p>Thank you very much.</p>
+	 
+	 <!-- Back Button -->
+    <a href="first_page.html" class="back-button">Back to Main Page</a>
+</body>
+</html>

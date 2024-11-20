@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<!-- 
+	This is the html code for the first page. The layout will be column format and float.
+	
+	Author: Ibing Maharlika
+   Date: 9/23/24
+-->
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="keyword" content="quality inspector, produce, art, plants, color, hiking">
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<title> Ibing Maharlika </title>
+	
+	<link href="reset.css" rel="stylesheet">
+	<link href="fp_style.css" rel="stylesheet">
+	<link href="fp_layout.css" rel="stylesheet">	
+	
+	<script src="fp_script.js" async></script>
+	
+</head>
+
+<body id="homepage">
+	<!--	Header section has an image which contain name of the website's subject 
+			and a navigation buttons bar. -->
+	<header>	
+		<img src="Images/fp_Images_Icons/headerLogo3.png" alt="">
+		
+		<!-- Will be inserted using javascript -->
+		<div id="localTime"></div>
+		
+		<nav id="nav-bar" class="horizontalNavigation">
+		
+		<!--
+			<a id="navicon" href="#"><img src="fr_navicon.png" alt="Nav Icon" > </a> -->
+			
+			<button id="navicon" >
+				<img src="Images/fr_navicon.png" alt="Navigation Icon">
+			</button>
+			
+				<ul class="mainmenu">			
+					<li><a href="first_page.html">About Me</a></li>
+					<li><a href="another_page.html">Design Process</a></li>					
+					<li><a href="#" class="submenuTitle">Birthdays</a> 
+						<ul class="submenu">
+							<li><a href="birthday_countdown.html">Countdown</a></li>
+							<li><a href="birthday.html">Celebrations</a></li>							
+						</ul>	
+					</li>										
+					<li><a href="#" class="submenuTitle">Transcripts</a> 
+						<ul class="submenu">
+							<li><a href="transcript.html">Assignment 2</a></li>
+							<li><a href="transcript_form.html">Assingment 3</a></li>
+							<li><a href="A4_transcript.html">Assingment 4</a></li>
+							<li><a href="A5_transcript.html">Assingment 5</a></li>
+						</ul>	
+					</li>
+					<li><a href="#" class="submenuTitle">Miscellaneous</a>	
+						<ul class="submenu">
+							<li><a href="upload_setup1.html">Upload and Test</a></li>
+							<li><a href="reference_page.html">Reference</a></li>
+							<li><a href="video_presentations.html">Video Presentations</a></li>
+						</ul>
+					</li>
+				</ul>	
+		</nav>		
+	</header>
+	
+	<!--	This is the main body part which is divided into two columns, left column 
+			display the image and right column display texts. --> 
+	<section id="about-section">
+		<div id="leftColumn">
+			<a href="another_page.html" title="This leads you to another page.">
+			<img src="Images/fp_Images_Icons/backgroundImage10.png" alt="Self Image">		
+			</a>		
+		</div>
+		
+		<div id ="rightColumn">
+			<h1>About me </h1>
+				<p>In my current role as a Produce Quality Inspector 
+				for a chain of grocery stores, I leverage my extensive background in 
+				farming, food science, and production management to ensure that 
+				only the highest quality produce reaches our customers. My responsibilities involve
+				meticulously inspecting all incoming produce at the distribution warehouse,
+				assessing factors such as freshness, ripeness, and overall quality before 
+				it is distributed to the stores.</p>
+			
+				<p>This position aligns perfectly with my career journey, from my early interest 
+				in gardening to my formal education in farming and food science at Durham College. 
+				The skills I honed during my time in the greenhouse and fields, combined with my experience 
+				in managing production processes, have equipped me to excel in this role. My passion for horticulture and commitment to quality assurance drive me to uphold the highest standards 
+				in produce inspection, contributing to the success of the grocery chain 
+				and the satisfaction of its customers.</p>
+		</div>
+	</section>
+	
+	<!-- Footer section has 2 sections and a navigation class. -->
+	<footer>	
+		<div id="gotoButton">
+			<a href="form.html" class="btn goto" title="This leads you to contact page.">Contact Me</a>	
+		</div>
+		
+		<nav class="verticalNavigation">
+			<h3>Connect</h3>
+				<ul>
+					<li><a href="#"><img id="instaicon" src="Images/fp_Images_Icons/instaicon.png" alt="" >Instagram</a></li>
+					<li><a href="#"><img id="fbicon" src="Images/fp_Images_Icons/fbicon.png" alt="" >Facebook</a></li>
+					<li><a href="#"><img id="twittericon" src="Images/fp_Images_Icons/twittericon.png" alt="" >X</a></li>            
+				</ul>
+		</nav>
+		
+		<div id="contactInfo">
+			<h3>Contact</h3>
+				<p>414 Tree Lane <br>
+					Essex, Vermont 05452<br>
+					(802) 555-0414 </p>
+				<p>Mon - Thu: 9 a.m. - 8 p.m.<br>
+					Sat - Sun: 9 a.m. - 5 p.m.</p>					
+		</div>		
+		
+		<div id="copyRight">
+			<p>Ibing Maharlika &copy; 2024 All Rights Reserved</p>
+		</div>
+		
+   </footer>	
+</body> 
+</html>

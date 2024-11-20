@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<!-- 
+	This is the html code for the web form page. 
+	
+	Author: Ibing Maharlika
+   Date: 10/02/24
+-->
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="keyword" content="quality inspector, produce, art, plants, color, hiking">
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<title>Contact Me</title>
+	
+	<link href="reset.css" rel="stylesheet">
+	<link href="fp_style.css" rel="stylesheet">
+	<link href="fp_layout.css" rel="stylesheet">	
+	<link href="oform.css" rel="stylesheet">
+	<link href="fr_styles.css" rel="stylesheet">
+	<script src="rb_formsubmit.js"></script>
+</head>
+
+<body>
+	<!--	Header section has an image which contain name of the website's subject 
+			and a navigation buttons bar. -->
+	<header>	
+		<img src="Images/fp_Images_Icons/headerLogo3.png" alt="">
+		
+		<nav id="nav-bar" class="horizontalNavigation">
+			<button id="navicon" >
+				<img src="Images/fr_navicon.png" alt="Navigation Icon">
+			</button>
+			
+				<ul class="mainmenu">			
+					<li><a href="first_page.html">About Me</a></li>
+					<li><a href="another_page.html">Design Process</a></li>
+					<li><a href="#" class="submenuTitle">Birthdays</a> 
+						<ul class="submenu">
+							<li><a href="birthday_countdown.html">Countdown</a></li>
+							<li><a href="birthday.html">Celebrations</a></li>							
+						</ul>	
+					</li>									
+					<li><a href="#" class="submenuTitle">Transcripts</a> 
+						<ul class="submenu">
+							<li><a href="transcript.html">Assignment 2</a></li>
+							<li><a href="transcript_form.html">Assingment 3</a></li>
+							<li><a href="A4_transcript.html">Assingment 4</a></li>
+							<li><a href="A5_transcript.html">Assingment 5</a></li>
+						</ul>	
+					</li>
+					<li><a href="#" class="submenuTitle">Miscellaneous</a>	
+						<ul class="submenu">
+							<li><a href="upload_setup1.html">Upload and Test</a></li>
+							<li><a href="reference_page.html">Reference</a></li>
+							<li><a href="video_presentations.html">Video Presentations</a></li>
+						</ul>
+					</li>
+				</ul>	
+			
+		</nav>		
+	</header>
+	
+	<section>
+		<h1>Contact Me</h1>	
+	
+	<form id="cOrder" action="http://www.example.com/sample" method="post">
+		
+		<!-- The form is divided into 3 fieldsets for design purposes -->		
+		<fieldset id="custInfo">			
+			<legend>Personal Information</legend>
+				
+			<div class="formRow">	
+				<label for="fName">First Name*</label>
+				<input name="firstName" id="fName" type="text" placeholder="First name" required >
+			</div>	
+			<div class="formRow">	
+				<label for="lName">Last Name*</label>
+				<input name="lastName" id="lName" type="text" placeholder="Last name" required >
+			</div>	
+			<div class="formRow">	
+				<label for ="street">Street address</label>
+				<input name="custStreet" id="street" type="text" >
+			</div>	
+			<div class="formRow">	
+				<label for="city">City</label>
+				<input name="custCity" id="city" type="text" value="Ottawa" >
+			</div>
+		</fieldset>
+		
+		<fieldset id="custInfo2">
+			<legend>Mailing Information</legend>
+			<div class="formRow">	
+				<label for="province">Province</label>
+				<input name="custProvince" id="province" type="text" value="Ontario">
+			</div>	
+			<div class="formRow">	
+				<label for="poscode">Postal code</label>
+				<input name="custPoscode" id="poscode" type="text" placeholder="A1A 1A1" 
+				pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" >
+				
+			</div>	
+			<div class="formRow">	
+				<label for="phone">Phone number</label>
+				<input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"
+				pattern="^\d{10}$|^(\d3\s*)?\d{3}[\s-]?\d{4}$" >
+			</div>	
+			<div class="formRow">	
+				<label for="mail">E-mail*</label>
+				<input name="custEmail" id="mail" type="email"	required >
+			</div>	
+		</fieldset>
+		
+		<fieldset id="custInfo3">	
+			<legend>Additional Information</legend>
+			<div class="formRow">
+				<label for="occupation">Occupation</label>
+				<select name="occupationType" id="occupation">
+					<option value="occupation1">Actor</option>
+					<option value="occupation2">Artist</option>
+					<option value="occupation3">Dancer</option>
+					<option value="occupation4">Economist</option>
+					<option value="occupation5">Sportster</option>
+					<option value="occupation6" selected >Student</option>
+				</select>
+			</div>
+			
+			<div id="contactMeCB">			
+				<input name="addMe" id="addCB" value="yes" type="checkbox" >
+				<label for="addCB">**URGENT, contact me, please!</label>
+			</div>
+			
+			<div class="formRow" id="commBoxRow">
+				<label for="commBox">Tell me about yourself:</label>
+				<textarea name="custExp" id="commBox" maxlength="500"></textarea>
+				<p id="charCaption">Limit: 500 characters</p>
+			</div>			
+			
+			<div id="buttons">					
+					<input type="reset" value="Clear" >
+					<input type="submit" value="Let's get connected" >
+			</div>
+		</fieldset>	
+	</form>	
+	</section>
+	
+	<footer>
+		<div id="gotoButton">
+			<a href="form.html" class="btn goto" title="This leads you to contact page.">Contact Me</a>	
+		</div>
+		
+		<nav class="verticalNavigation">
+			<h3>Connect</h3>
+				<ul>
+					<li><a href="#"><img id="instaicon" src="Images/fp_Images_Icons/instaicon.png" alt="" >Instagram</a></li>
+					<li><a href="#"><img id="fbicon" src="Images/fp_Images_Icons/fbicon.png" alt="" >Facebook</a></li>
+					<li><a href="#"><img id="twittericon" src="Images/fp_Images_Icons/twittericon.png" alt="" >X</a></li>            
+				</ul>
+		</nav>
+		
+		<div id="contactInfo">
+			<h3>Contact</h3>
+				<p>414 Tree Lane <br>
+					Essex, Vermont 05452<br>
+					(802) 555-0414 </p>
+				<p>Mon - Thu: 9 a.m. - 8 p.m.<br>
+					Sat - Sun: 9 a.m. - 5 p.m.</p>					
+		</div>		
+		
+		<div id="copyRight">
+			<p>Ibing Maharlika &copy; 2024 All Rights Reserved</p>
+		</div>
+	</footer>	
+</body>
+</html>	

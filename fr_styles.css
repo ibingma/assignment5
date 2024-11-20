@@ -1,0 +1,215 @@
+@charset "utf-8";
+
+/*
+   This file contains the base styles used by the web form page.
+	
+	Author: Ibing Maharlika
+   Date: 10/21/24
+*/
+
+/*Form section setting. Added background image to the form */
+body > section {
+	background-image: url("Images/form_images/scenery2.png");
+	background-size: cover;
+	background-position: center;
+	background-color:hsl(132,11%,91%);
+	margin-top:0;	
+	padding: 1em;
+}
+
+/* Form title styling */
+section h1 {
+   font-size: 2.4em;
+   line-height: 2em;
+   font-family: 'Roboto', san-serif;
+   letter-spacing: 0.3em;
+   text-align: center;
+   font-weight: normal;
+   color: rgb(78,88,54);
+	background-color: hsla(132,11%,91%, 90%);
+	border-radius: 8px;
+	transition: background 3s, color 2s;
+}
+section h1:hover {
+	background: rgb(78,88,54);;
+	color: hsla(132,11%,91%, 90%);
+}
+/* Form - add background color to the form to give more visibility 
+	for the label and input boxes */
+fieldset#custInfo,
+fieldset#custInfo2,
+fieldset#custInfo3 {
+	background-color: hsla(132,11%,91%, 70%);	
+    border: 2px solid #ccc; /* Customize the outline */
+    border-radius: 8px; /* Rounded corners for modern look */   
+	 padding: 0 2em;
+}
+
+/* Form - Remove default grooved border and apply custom border */
+fieldset {
+    border: none; 
+}
+
+/* Form - positioned the form in the center of the body */
+form#cOrder {	
+	font-size: 1.2em;		
+	justify-content: center;
+}
+
+/*Form rows setting.*/
+div.formRow {	
+	margin: 7px 0 ;
+	
+}
+div.formRow label {
+	width: 138px;
+	/*display:inline-block;*/
+	
+}
+div.formRow > select,
+div.formRow > input {	
+	font-family:'Roboto', san-serif;
+	color: rgb(0, 0,0);
+	font-size: 1em;		
+}
+
+/*Selection box.*/
+div.formRow select#occupation {	
+	font-size: 0.9em;
+	min-width: 216px;
+}
+
+/*Checkbox font size.*/
+#contactMeCB {
+	font-size: 0.9em;
+}
+
+/*Clear and Submit buttons font size.*/
+div#buttons {
+	font-size: 0.8em;	
+}
+
+#buttons input[type="reset"] {
+	font-size: 1em;
+	width: 50%;
+}
+#buttons input[type="submit"] {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/*Mainly for caption lettering.*/
+section p {
+   line-height: 1em;
+   margin: 2px 0px;
+}
+
+#buttons input[type="submit"] {
+    transition: background 3s, color 3s ease;
+}
+
+#buttons input[type="submit"]:hover {
+	background: rgb(78,88,54);
+	color: hsla(132,11%,91%, 90%);
+}
+
+@media only screen and (max-width: 480px) {
+	section h1 {
+		font-size: 1.8em;
+	}
+	
+	form#cOrder {
+		font-size: 1.8em;	
+		margin: 0 auto;
+		padding: 0 0.5em;
+	}
+	
+	fieldset#custInfo,
+	fieldset#custInfo2,
+	fieldset#custInfo3 {
+		background-color: hsla(132,11%,91%, 70%);	
+		border: 2px solid #ccc; /* Customize the outline */
+		border-radius: 8px; /* Rounded corners for modern look */   
+		padding: 0 20px;
+	}
+	
+	div.formRow label {
+		width: 100%;	
+		padding-bottom: 5px;
+	}
+	
+	div.formRow > select,
+	div.formRow > input {			
+		font-size: 1em;		
+	}
+	
+	div.formRow select#occupation {		
+		font-size: 1em;
+	}
+	
+	#commBox {
+		font-size: 1em;
+		padding-bottom: 1em;
+	}
+	
+	/* Center the clear and submit buttons */
+	div#buttons {
+		margin: 1em auto 0 auto;
+	}
+	
+	#buttons input[type="submit"] {
+		margin: 0 ;
+	}
+}
+
+	
+@media only screen and (min-width: 481px) and (max-width: 640px) {
+	section h1 {
+		font-size: 2.2em;
+	} 
+	
+	form#cOrder {
+		font-size: 1.4em;	
+		margin: 0 auto; /* Center align the form */
+	}
+	
+	div.formRow label {
+		width: 100%;
+	}
+	
+	div.formRow > select,
+	div.formRow > input {			
+		font-size: 1em;		
+	}
+	
+	div.formRow select#occupation {		
+		font-size: 1em;
+	}
+	/*Checkbox font size.*/
+	#contactMeCB {
+		font-size: 0.8em;
+	}
+	#commBox {
+		font-size: 1em;
+	}
+	
+	/* Center the clear and submit buttons */
+	div#buttons {
+		margin: 1em auto 0 auto;
+	}
+	
+	#buttons input[type="submit"] {
+		margin: 0 ;
+	}
+	
+	/* Adjust footer layout */
+	nav.verticalNavigation {
+		padding-top: 2em;
+	}
+}
+
+@media only screen and (min-width: 641px) and (max-width: 960px) {
+	form#cOrder {
+		margin: 0 auto;	
+	}
+}

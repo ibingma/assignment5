@@ -1,0 +1,77 @@
+@charset "utf-8";
+/*
+   This file contains the style settings used by the birthday page.
+	Some of the styling are mixed in the bd_layout.css file. For global styling,
+	the settings followed fp_style.css and fp_layout.css, which are also applied
+	on other pages.
+	
+	Author: Ibing Maharlika
+   Date: 10/28/24
+*/
+
+/*=================================================================
+	Body > header layout 
+===================================================================*/
+/* HTML image for the background of the header section */
+#bdImage {	
+	opacity: 1;	/* This can be adjusted whenever necessary */
+}
+
+/*=================================================================
+	Body's article and asides layout 
+===================================================================*/
+/* Background image for the article and asides sections */
+.main  {
+	background-image: url("Images/birthday_images/party2.png");
+	background-repeat: repeat;
+	z-index: -1; /* Set to be the most back layer */
+}
+.left p {	
+	font-size: 1.2em;
+	
+}
+/* Left Side - bottom container's background image. Pseudo class is used 
+to apply opacity to the background image without affecting the texts */
+.bottom-container::before { 
+	content:"";
+	background-image: url("Images/birthday_images/bd_yoga 2.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;	
+	border-radius: 35px; /* Adjust to the desired roundness */
+   overflow: hidden;  /* Hide the excess corner of the image, create rounded corners effect */
+	opacity:0.5;	
+}
+
+/* Left Side - Both asides of the bottom section are displayed in flexbox */
+.bottom-container .bottom-aside {
+	color: rgb(81, 81, 81); 
+	box-shadow: inset 15px 15px 25px rgba(101, 101, 101, 0.4),
+               inset -15px -15px 25px rgba(101, 101, 101, 0.4);
+   border-radius: 35px;	
+}
+	
+/* Right side - title text setting */
+.right-aside h2 { 
+	text-align: center;
+}
+
+/* Right side - blockquote (wishes texts) setting */
+blockquote {
+	line-height:1.1em;	
+}
+
+/* Right side - blockquote's footer (names texts) setting */
+blockquote footer  {
+	justify-content: right;
+	font-size: 0.9em;
+}
+
+/* media query settings are placed in the bd_layout.css file */
+@media only screen and (max-width: 480px) {
+	
+}
+
+@media only screen and (min-width: 641px) and (max-width: 960px) {
+	
+}
